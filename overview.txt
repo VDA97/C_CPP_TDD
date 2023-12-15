@@ -1,0 +1,20 @@
+Checkout Class that maintains a list of items that are being checked out.
+Checkout Class provides interfaces for:
+1. Setting the price of individual items 
+2. Adding individual items to the check out
+3. The current total cost for all the items added
+4. Add an apply discounts on select items when N number are purchased
+
+Test Cases - TDD
+1. X Can create an instance of the Checkout Class -> done
+2. X Can add an item price 
+3. X Can add an item
+3.1 X Can create an Item 
+4. Can calculate the current total
+4.1 X Can find an item
+4.2 X Can get item Price of each item
+4.3 x Can use a function to sum all of item prices to return total
+5. x Can add multiple items and get correct total
+6. Can add discount rules
+7. Can apply discount rules to the total
+
