@@ -5,7 +5,7 @@ OPT=-O0
 WARN=-Wall
 CCFLAGS=$(DEBUG) $(OPT) $(WARN)
 LD=g++
-OBJS= main.o Checkout.o Item.o
+OBJS= main.o Checkout.o
 GTEST=-lgtest
 GTEST_MAIN=-lgtest_main
 PTHREAD=-lpthread
@@ -17,9 +17,6 @@ main.o: main.cpp
 
 Checkout.o: Checkout.cpp
 	$(CC) -c $(CCFLAGS) $(GTEST) $(GTEST_MAIN) $(PTHREAD) Checkout.cpp -o Checkout.o
-
-Item.o: Item.cpp
-	$(CC) -c $(CCFLAGS)	$(GTEST) $(GTEST_MAIN) $(PTHREAD) Item.cpp -o Item.o
 
 clean:
 	@rm -f *.o
