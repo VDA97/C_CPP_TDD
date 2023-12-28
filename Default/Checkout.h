@@ -12,10 +12,21 @@ public:
     void addItem(std::string item);
     int calculateTotal();
     void addDiscount(std::string item, int nbrOfItems, int discountPrice);
+    void calculateItem(std::string item, int itemCnt);
+
     virtual ~Checkout();
 
 protected:
+    struct Discount
+    {
+        int nbrOfItems;
+        int discountPrice;
+    };
+    void calculateDiscount(std::string item, int itemCnt, Discount discount);
+
     std::map<std::string, int> prices;
+    std::map<std::string, Discount> discounts;
+    std::map<std::string, int> items;
     int total;
 };
 
